@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    
+    <h1><%= User.find_by(username: params[:username], password: params[:password]).username %></h1>
 
   </body>
 </html>
