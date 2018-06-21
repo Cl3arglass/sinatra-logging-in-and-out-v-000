@@ -4,7 +4,7 @@ class CreateUsersTable < ActiveRecord::Migration[5.1]
 
       t.string :username
       t.string :password
-      t.integer :balance
+      t.float :balance
     end
   end
 end
