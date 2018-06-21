@@ -21,11 +21,9 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
 
-    if !session[:username]
+
       erb :account
-    else
-      erb :error
-    end
+  
   end
 
   get '/logout' do
