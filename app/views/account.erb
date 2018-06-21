@@ -7,9 +7,9 @@
   </head>
   <body id="page-top">
     <h1>Welcome <%= Helpers.current_user(session).username %></h1>
-    <h1>Your Balance: <%= User.find_by(id: session[:user_id]).balance %></h1>
+    <h1>Your Balance: <%= Helpers.current_user(session).balance %></h1>
 
-    
+
 
   </body>
 </html>
