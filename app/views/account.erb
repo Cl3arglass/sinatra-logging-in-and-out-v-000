@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <h1><%= User.find_by(User.find_by(id: session[:user_id])).username %></h1>
-    <h1><%= User.find_by(User.find_by(id: session[:user_id])).balance %></h1>
+    <h1><% if !!session[:user_id] %>
+    <%= User.find_by(User.find_by(id: session[:user_id])).username %>
+   <% end %> </h1>
+    <h1><% if !!session[:user_id] %>
+    <%= User.find_by(User.find_by(id: session[:user_id])).balance %>
+   <% end %> </h1>
 
   </body>
 </html>
