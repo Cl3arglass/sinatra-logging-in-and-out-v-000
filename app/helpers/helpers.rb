@@ -4,8 +4,6 @@ class Helpers
   end
 
   def self.is_logged_in?(session)
-    # User.find_by(id: session[:user_id])
-    # puts session
     !session[:username]
   end
 end
