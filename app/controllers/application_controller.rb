@@ -22,9 +22,9 @@ class ApplicationController < Sinatra::Base
   get '/account' do
 
     if !session[:username]
-      erb :error
-    else
       erb :account
+    else
+      erb :error
     end
   end
 
